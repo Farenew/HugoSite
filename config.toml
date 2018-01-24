@@ -57,47 +57,17 @@ defaultContentLanguageInSubdir = false
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Xiamen University", url = "https://www.xmu.edu.cn/" } ]
 
-
-  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "ForenewHan@gmail.com"
   address = "Room 402, College Academic Building II, Xiamen University"
-  #office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  #phone = "888 888 88 88"
-  #skype = "echo123"
   telegram = "jiangfeng"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
 
-  # Discussion link (e.g. link to a forum, mailing list, or chat).
-  #   Uncomment line below to use.
-  discussion = { name = "Discuss", url = "https://discourse.gohugo.io" }
-
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
   logo = "logo.png"
-
-  # Enable/disable map in Contact widget.
-  # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
-  # a map provider below.
-  # To use Google Maps, set `map = 1` and enter your API key that can be obtained here:
-  #   https://developers.google.com/maps/documentation/javascript/get-api-key
-  # To use OpenStreetMap tiles, set `map = 2`.
-  # To use OpenStreetMap on a high traffic site, set `map = 3` and enter your API key that can be obtained here:
-  #   https://www.mapbox.com/studio/account/tokens
-  # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-  #
-  # Map provider:
-  #   0: No map
-  #   1: Google Maps
-  #   2: OpenStreetMap (Mapnik)
-  #   3: OpenStreetMap (Mapbox)
-  map = 0
-  map_api_key = ""
-  latitude = "37.4275"
-  longitude = "-122.1697"
-  zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
@@ -157,45 +127,15 @@ defaultContentLanguageInSubdir = false
   custom_css = []
   custom_js  = []
 
-  # Publication types.
-  #   Used to categorize publications.
-  #   The index of the publication type in the list is used as its unique numerical identifier.
-  #   The numeric ID is used in a publication's frontmatter to categorize it.
-  #   The language can be edited below.
-  #   For multilingual sites, `publication_types` can be copied to each language section at the end of this file and
-  #   translated.
-  publication_types = [
-    'Uncategorized',  # 0
-    'Conference paper',  # 1
-    'Journal article',  # 2
-    'Manuscript',  # 3
-    'Report',  # 4
-    'Book',  # 5
-    'Book section'  # 6
-  ]
-
   # Configuration of talk pages.
   [params.talks]
     # Show talk time?
     time = true
 
-  # Configuration of publication pages.
-  [params.publications]
-    # Date format (refer to Go's date format: http://fuckinggodateformat.com )
-    #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "January, 2006"
-
   # Configuration of project pages.
   [params.projects]
     # List publications and talks related to the project?
     list_children = true
-
-    # Publication list format.
-    #   0 = Simple
-    #   1 = Detailed
-    #   2 = APA
-    #   3 = MLA
-    publication_format = 3
 
   # Social/Academic Networking
   #
@@ -218,17 +158,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "ForenewHan@gmail"
-
-#  [[params.social]]
-#    icon = "twitter"
-#    icon_pack = "fa"
-#    link = "//twitter.com/GeorgeCushen"
-
-#  [[params.social]]
-#    icon = "google-scholar"
-#    icon_pack = "ai"
-#    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+    link = "mailto:ForenewHan@gmail"
 
   [[params.social]]
     icon = "github"
@@ -249,25 +179,20 @@ defaultContentLanguageInSubdir = false
   url = "#about"
   weight = 1
 
-#[[menu.main]]
-#  name = "Publications"
-#  url = "#publications_selected"
-#  weight = 2
-
 [[menu.main]]
-  name = "Posts"
-  url = "#posts"
+  name = "科学"
+  url = "#science"
   weight = 3
 
 [[menu.main]]
-  name = "Projects"
-  url = "#projects"
+  name = "随笔"
+  url = "#artiles"
   weight = 4
 
-#[[menu.main]]
-#  name = "Teaching"
-#  url = "#teaching"
-#  weight = 5
+[[menu.main]]
+  name = "Programming"
+  url = "#Programming"
+  weight = 5
 
 [[menu.main]]
   name = "Contact"

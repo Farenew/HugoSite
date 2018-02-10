@@ -13,12 +13,12 @@ weight = 15
 # Content.
 # Display content from the following folder.
 # For example, `folder = "project"` displays content from `content/project/`.
-folder = "project"
+folder = "programming"
 
 # View.
 # Customize how projects are displayed.
 # Legend: 0 = list, 1 = cards.
-view = 0
+view = 1
 
 # Filter toolbar.
 
@@ -33,12 +33,12 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
-  name = "1"
-  tag = "1"
+  name = "R"
+  tag = ".R"
 
 [[filter]]
   name = "Other"
-  tag = "2"
+  tag = ".Other"
 
 +++
 

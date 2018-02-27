@@ -34,7 +34,7 @@ image_preview: programming/atom.png
 - 下载安装Atom
 - 在Atom的package里搜索**markdown-themeable-pdf**，安装package
 - 在package里，有关于自定义输出格式的设置:
-  ![custom_path](..\..\static\img\programming\custom_path.png)
+  ![custom_path](https://www.forenewhan.science/img/programming/custom_path.png)
 - 打开这里目录提示的`style.css`文件。写入自己喜欢的css格式就好。
   这里还有一些其他的设置，自己看着更改，比如输出jpg，文档尺寸等。
 - 用atom编辑好一个markdown文件后，使用`ctrl+shift+E`快捷键，就可以在当前目录生成pdf文件

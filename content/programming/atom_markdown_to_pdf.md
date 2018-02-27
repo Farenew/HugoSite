@@ -89,3 +89,7 @@ My css goes here
 [链接](https://github.com/ForenewHan/MarkDownCode/tree/master/Others)
 
 注意在`footer.js`里面的名字是我的名字，记得改这个。
+
+---
+
+最后提一句，上文中我的那个笔记，可是满满的政治智慧啊~~干货满满的呦，但能不能体会到，随缘啦~

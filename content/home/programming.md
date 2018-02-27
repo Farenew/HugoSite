@@ -37,6 +37,10 @@ filter_default = 0
   tag = ".R"
 
 [[filter]]
+  name = "tips"
+  tag = ".TIPS"
+  
+[[filter]]
   name = "Other"
   tag = ".Other"
 

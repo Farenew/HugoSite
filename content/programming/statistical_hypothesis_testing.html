@@ -19,7 +19,7 @@ image_preview: programming/ladyTastingTea.jpg
 
 
 <div class="section level1">
-<h1>引言</h1>
+<h1>1. 引言</h1>
 <p>本文题图是统计学中著名的例子，lady tasting tea，女士品茶。它讲的是Fisher最初关于统计学假设提出的一个例子。这个故事是这样的：</p>
 <blockquote>
 <p>大约19世纪20年代，在剑桥大学，几位绅士和他们的妻子坐在一起品茶。其中一位夫人坚持认为，把茶倒入奶中，和把奶倒入茶中，得到的口感是不一样的。有些人认为她完全是在胡说八道，因为混合物的化学成分没有任何区别。但其中一位戴着厚厚的眼镜瘦弱的绅士站起来，说让我们来做个实验吧。</p>
@@ -27,9 +27,9 @@ image_preview: programming/ladyTastingTea.jpg
 <p>这个例子的实现就是一个统计假设检验, 所谓统计假设检验，指的是一个检验的方法, 通过<strong>一组样本的数据</strong>来对一个<strong>统计假设</strong>做判断。</p>
 </div>
 <div class="section level1">
-<h1>统计假设检验</h1>
+<h1>2. 统计假设检验</h1>
 <div id="statistical-hypothesis" class="section level2">
-<h2>统计假设(statistical hypothesis)</h2>
+<h2>2.1 统计假设(statistical hypothesis)</h2>
 <p>统计假设(statistical hypothesis)，也叫作验证性数据分析(confirmatory data analysis)。它指的是两个或者多个变量的一个关系的叙述。它可以指(1)关于某个特定统计学参数的值的叙述，比如均值，中位数，众数，方差等。或者是(2)一个特定的变量遵循的某个概率分布的叙述</p>
 <p>例如：</p>
 <ul>
@@ -41,7 +41,7 @@ image_preview: programming/ladyTastingTea.jpg
 <p>统计假设具有这样的特征：<em>可以通过观测样本中与假设相关的事实来对它们进行测试。测试的结果就是可以得到结论，来说明是否应该相信假设的说法成立。</em></p>
 </div>
 <div id="-1" class="section level2">
-<h2>统计假设检验</h2>
+<h2>2.2 统计假设检验</h2>
 <p>统计假设检验(statistical hypothesis test)则是统计推断的方法，一般来讲，要比较两组统计数据，或者是一组数据和理想化的模型数据进行比较。基于这两组数据集的关系，提出假设，这个假设就是所谓的<code>备选假设(alternative hypothesis)</code>，用这个假设和理想化的<code>零假设(null hypothesis)</code>，进而提出两组数据集之间的关系。</p>
 <ul>
 <li><strong>零假设使用<span class="math inline">\(H_0\)</span>表示</strong></li>
@@ -54,11 +54,11 @@ image_preview: programming/ladyTastingTea.jpg
 <li>学校所有学生年龄的平均数大于23.4岁</li>
 <li>学校所有学生年龄的平均数是27.4岁</li>
 </ul>
-<p>经过我们的统计假设检验，就可以通过<code>备选假设</code>来拒绝，或者__无法拒绝<code>零假设</code>__（注意，这里不能是接受）。</p>
+<p>经过我们的统计假设检验，就可以通过<code>备选假设</code>来拒绝，或者<strong>无法拒绝<code>零假设</code></strong>（注意，这里不能是接受）。</p>
 <p>统计假设检验的模式很简单，就是给定一组统计数据，来建立零假设和备选假设，然后通过计算来判断这些数据是否可以拒绝，还是不能接受零假设。</p>
 </div>
 <div class="section level2">
-<h2>拒绝零假设</h2>
+<h2>2.3 拒绝零假设</h2>
 <p>这里最核心的一点就是，在统计假设检验中，<strong>我们只能拒绝零假设，而决不能接受零假设</strong>。</p>
 <p>这里经常会用现实中的一个例子来做类比:</p>
 <blockquote>
@@ -71,7 +71,7 @@ image_preview: programming/ladyTastingTea.jpg
 <p>关于如何指定<code>零假设</code>和<code>备选假设</code>, 在后面介绍.</p>
 </div>
 <div class="section level2">
-<h2>统计假设检验的几个例子</h2>
+<h2>2.4 统计假设检验的几个例子</h2>
 <p>什么样的情况可以用统计假设检验呢？情况很多，所有关于总体的统计假设都可以做检验，这里简单举几个例子：</p>
 <ol style="list-style-type: decimal">
 <li>把牛奶倒入茶和把茶倒入牛奶，口味是否有区别(注明的lady testing tea的例子)</li>
@@ -84,7 +84,7 @@ image_preview: programming/ladyTastingTea.jpg
 </div>
 </div>
 <div class="section level1">
-<h1>两类错误</h1>
+<h1>3. 两类错误</h1>
 <p>即便使用了零假设和备选假设，在做统计假设检验中，还是会发生两类错误:</p>
 <ul>
 <li>第一类错误(Type I error): 在零假设正确的时候, 错误地拒绝了零假设.</li>
@@ -101,71 +101,21 @@ image_preview: programming/ladyTastingTea.jpg
 <li>Pr[Type II error] = <span class="math inline">\(\beta\)</span></li>
 </ul>
 <div class="section level2">
-<h2>第一类错误的概率</h2>
+<h2>3.1 第一类错误的概率</h2>
 <p><span class="math inline">\(\alpha\)</span>值指的是犯第一类错误的概率, 这个值也被称为是<strong>显著性水平(significant level)</strong>. 这个值是在样本收集前指定的, 根据不同的问题可以指定不同的<span class="math inline">\(\alpha\)</span>值。 最常用的<span class="math inline">\(\alpha=0.05\)</span>. 因为<span class="math inline">\(\alpha\)</span>表示在<code>零假设</code>为真的情况下拒绝<code>零假设</code>的概率, 而当<code>零假设</code>为真的时候, 只有样本值显著与<code>零假设</code>有差异, 才会拒绝<code>零假设</code>, 也就是说, <span class="math inline">\(\alpha\)</span>表示了在概率分布中最靠外的地方. 因此就有以下三种情况:</p>
-<pre class="r"><code>par(mfrow=c(2,2))
-
-x = seq(0, 10, 0.01)
-
-# graph 1
-plot(x, dnorm(x, 5, 1), type = &quot;l&quot;, lwd = 1.5, main = &quot;two tailed&quot;)
-abline(h=0, lwd = 1.5)
-x1 = qnorm(0.025, 5, 1)
-y1 = dnorm(x1, 5, 1)
-
-xc = c(x[x&lt;x1], x1, x1)
-yc = c(dnorm(x[x&lt;x1], 5, 1), y1, 0)
-polygon(xc, yc, col = &quot;grey&quot;)
-# draw a segement, from (x1,0) to (x1, y1)
-segments(x1, 0, x1, y1)
-text(2, 0.05, &quot;0.025&quot;)
-
-x2 = qnorm(1-0.025, 5, 1)
-y2 = dnorm(x2, 5, 1)
-xc2 = c(x2, x[x&gt;x2], x2)
-yc2 = c(y2, dnorm(x[x&gt;x2], 5, 1), 0)
-polygon(xc2, yc2, col = &quot;grey&quot;)
-segments(x2, 0, x2, y2)
-text(8, 0.05, &quot;0.025&quot;)
-
-# graph 2
-plot(x, dnorm(x, 5, 1), type = &quot;l&quot;, lwd = 1.5, main = &quot;left tailed&quot;)
-abline(h=0, lwd = 1.5)
-x1 = qnorm(0.05, 5, 1)
-y1 = dnorm(x1, 5, 1)
-
-xc = c(x[x&lt;x1], x1, x1)
-yc = c(dnorm(x[x&lt;x1], 5, 1), y1, 0)
-polygon(xc, yc, col = &quot;grey&quot;)
-segments(x1, 0, x1, y1)
-text(2, 0.05, &quot;0.05&quot;)
-
-# graph 3
-plot(x, dnorm(x, 5, 1), type = &quot;l&quot;, lwd = 1.5, main = &quot;right tailed&quot;)
-abline(h=0, lwd = 1.5)
-x1 = qnorm(0.05, 5, 1)
-y1 = dnorm(x1, 5, 1)
-
-x2 = qnorm(1-0.05, 5, 1)
-y2 = dnorm(x2, 5, 1)
-xc2 = c(x2, x[x&gt;x2], x2)
-yc2 = c(y2, dnorm(x[x&gt;x2], 5, 1), 0)
-polygon(xc2, yc2, col = &quot;grey&quot;)
-segments(x2, 0, x2, y2)
-text(8, 0.05, &quot;0.05&quot;)</code></pre>
 <p><img src="/programming/statistical_hypothesis_testing_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>对于图中灰色的部分, 称为临界域(critical region, 也叫<span class="math inline">\(\alpha\;region\)</span>), 如果样本的值落入了这一区域, 那么就称这一结果<strong>统计显著(statistical significant)</strong>. 注意统计显著并不一定等价于实际显著. 例如, 在统计学上可以发现, 男性和女性的IQ并不相同, 但统计学的结果是否足以证明有实际的应用呢?</p>
 <p>由于统计学显著的大量使用, 对于它的争议也逐渐产生, 特别是对于统计学显著和实际显著的区别. 参见<a href="https://en.wikipedia.org/wiki/Statistical_significance#Challenges">wikipedia的讨论</a></p>
 </div>
 <div class="section level2">
-<h2>第二类错误的概率</h2>
+<h2>3.2 第二类错误的概率</h2>
 <p><span class="math inline">\(\beta\)</span>表示第二类错误发生的概率, 因此<span class="math inline">\(1-\beta\)</span>就表示不犯第二类错误的概率, 因为一般来讲, 避免第二类错误更加重要一些, 所以<strong>1-<span class="math inline">\(\beta\)</span></strong>的值就受到更多关注, 把它称为<strong>检验的势(Power)</strong>. 即一个检验的势, 指的是在<code>零假设</code>为假并且判断正确的概率. <strong>检验的势越高越好, 强势检验也被称为高效率检验</strong>.</p>
 <p>势的计算也有对应的公式, 要求势的大小, 需要知道<strong>样本大小</strong>, <strong>效应值(effect size)</strong>, 以及<strong>显著性水平</strong>. 事实上, 以上三者和势, 已知其中任意三个, 就可以求出另一个值。</p>
 <p>关于势, 效应值等概念较为复杂, 这里不做过多介绍。</p>
 </div>
 </div>
 <div id="p-value" class="section level1">
-<h1>p-value</h1>
+<h1>4. p-value</h1>
 <p>为了量化对零假设的拒绝的程度, 引入了<strong>p值(p-value)</strong>, 指的是在给定的统计学模型下, 当零假设为真的时候, 实际观测数据落入极端值的概率。极端值可以是左极端<span class="math inline">\(\{X \geq x\}\)</span>(left-tail event) 或者是右极端 <span class="math inline">\(\{X \leq x\}\)</span>(right-rail event), 也可以是双极端(double tail event). 从<span class="math inline">\(\alpha\)</span>的介绍中已经明白, 极端值就是<strong>落在临界域(critical region)</strong>的值. 当样本值落在这里的时候, 可以统计学显著地拒绝<code>零假设</code>.</p>
 <p><code>p值</code>可以这样给出:</p>
 <ul>
@@ -178,33 +128,6 @@ text(8, 0.05, &quot;0.05&quot;)</code></pre>
 <p>当<span class="math inline">\(Pr(p\leq \alpha | H)\)</span>时, 拒绝零假设. 所以有: <span class="math display">\[ Pr(Reject \; H) = Pr(p\leq \alpha | H) = \alpha \]</span></p>
 <p>那么问题就来了, 既然有了<span class="math inline">\(\alpha\)</span>了, 为什么还需要引<code>入P-value</code>呢. 这是因为<code>p值</code>可以更准确地提高显著性水平.</p>
 <p>例如, 在<span class="math inline">\(\alpha = 0.05\)</span>的情况下, 得到的<code>p值</code>为0.02, 很显然, 观测数据落入了临界域, 统计学显著地可以拒绝零假设. 然而注意! 这时候<strong>犯第一类错误的概率仍然为5%!</strong> <strong>因为指定了<span class="math inline">\(\alpha\)</span>为0.05!</strong> 而如果<strong>使用p值作为新的显著性水平</strong>, 那么就可以说, 在显著性水平为0.02时, 拒绝零假设. 这样我们就把犯第一类错误的概率降低到了2%. 通过图来直观地说明这个问题:</p>
-<pre class="r"><code>x = seq(0, 10, 0.01)
-
-plot(x, dnorm(x, 5, 1), type = &quot;l&quot;, lwd = 1.5, main = &quot;right tailed&quot;)
-abline(h=0, lwd = 1.5)
-
-# $\alpha$ region
-x2 = qnorm(1-0.05, 5, 1)
-y2 = dnorm(x2, 5, 1)
-xc2 = c(x2, x[x&gt;x2], x2)
-yc2 = c(y2, dnorm(x[x&gt;x2], 5, 1), 0)
-polygon(xc2, yc2, col = &quot;grey&quot;)
-segments(x2, 0, x2, y2)
-text(7, 0.07, &quot;0.05&quot;)
-
-# p region
-x3 = qnorm(1-0.02, 5, 1)
-y3 = dnorm(x3, 5, 1)
-xc3 = c(x3, x[x&gt;x3], x3)
-yc3 = c(y3, dnorm(x[x&gt;x3], 5, 1), 0)
-polygon(xc3, yc3, col = &quot;blue&quot;)
-segments(x3, 0, x3, y3)
-text(8, 0.02, &quot;0.02&quot;)
-
-# p line
-abline(v = x3, lty = 2)
-text(7.4, 0.3, &quot;p = 0.02&quot;)
-text(7.4, 0.34, bquote(&quot;x=&quot;~.(x3)))</code></pre>
 <p><img src="/programming/statistical_hypothesis_testing_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>假设数据分布为正态分布，<span class="math inline">\(H_0: \mu = 5\)</span> , 在做了样本调查后，提出<span class="math inline">\(H_1: \mu &gt; 5\)</span>.</p>
 <p>样本中<span class="math inline">\(\mu = 7.053749\)</span>, 使用<code>pnorm</code>求得，此时的概率p为0.02. 落入了<span class="math inline">\(\alpha\; region\)</span>。这里也可以说，在显著性水平为0.02时，拒绝零假设。</p>
@@ -234,7 +157,7 @@ t.test(x, m=165, alternative = &quot;greater&quot;)</code></pre>
 </ol>
 </div>
 <div class="section level1">
-<h1>统计假设检验的一般流程</h1>
+<h1>5. 统计假设检验的一般流程</h1>
 <ol style="list-style-type: decimal">
 <li>对于未知的事实，提出一个最初的研究假设。</li>
 <li>建立<code>零假设</code>和<code>备选假设</code>，这一步非常关键，错误的<code>零假设</code>会导致结果完全错误。正确指定零假设的关键在于<strong>零假设总是会指定一个参数 等于 某个值</strong></li>
@@ -245,13 +168,13 @@ t.test(x, m=165, alternative = &quot;greater&quot;)</code></pre>
 <li>按照检验统计量(test statistics)的分布来查看对应的检验统计量的值<span class="math inline">\(t_{obs}\)</span>，是否落入拒绝域，拒<code>绝零假设</code>。</li>
 </ol>
 <p>以上是传统的流程，往往通过查表来实现，不需要做额外的复杂计算，但在现在，往往通过值<span class="math inline">\(t_{obs}\)</span>直接来求对应的<code>p值</code>。讨论<code>p值</code>来给出是否能拒绝<code>零假设</code>。</p>
-<div class="section level2">
-<h2>一些参考资料</h2>
+</div>
+<div class="section level1">
+<h1>6. 一些参考资料</h1>
 <p>这里仅列出来引用比较多的内容</p>
 <ol style="list-style-type: decimal">
 <li>Wikipedia</li>
 <li><a href="http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-hypothesis-tests%3A-significance-levels-alpha-and-p-values-in-statistics">http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-hypothesis-tests%3A-significance-levels-alpha-and-p-values-in-statistics</a></li>
 <li><a href="http://www.statisticshowto.com/one-sample-t-test/" class="uri">http://www.statisticshowto.com/one-sample-t-test/</a></li>
 </ol>
-</div>
 </div>

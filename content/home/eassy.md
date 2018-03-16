@@ -19,6 +19,5 @@ tags_exclude = []
 
 # Number of posts to list.
 count = 5
-
 +++
 

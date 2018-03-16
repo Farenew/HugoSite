@@ -1,5 +1,5 @@
 +++
-title = "Hello world"
+title = "在atom中使用markdown-themeable-pdf生成好看的PDF"
 date = 2018-02-27
 draft = false
 
@@ -15,7 +15,7 @@ summary = "利用atom的package方便地把markdown生成排版好看的pdf，ht
 #   Markdown linking is allowed, e.g. `caption = "[Image credit](http://example.org)"`.
 # Set `preview` to `false` to disable the thumbnail in listings.
 [header]
-image = "programming/atom.png"
+# image = "programming/atom.png"
 caption = "pdf"
 preview = true
 

@@ -37,8 +37,8 @@ filter_default = 0
   tag = ".R"
 
 [[filter]]
-  name = "tips"
-  tag = ".TIPS"
+  name = "knowledge"
+  tag = ".knowledge"
   
 [[filter]]
   name = "Other"

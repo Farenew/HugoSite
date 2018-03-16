@@ -242,10 +242,15 @@ defaultContentLanguageInSubdir = false
   weight = 4
 
 [[menu.main]]
+  name = "post"
+  url = "#post"
+  weight = 5
+  
+[[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 5
-
+  weight = 6
+  
 # Taxonomies.
 [taxonomies]
   tag = "tags"

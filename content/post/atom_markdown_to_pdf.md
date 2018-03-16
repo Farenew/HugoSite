@@ -1,20 +1,26 @@
----
-date: '2018-02-27'
-title: 利用atom的markdown-themeable-pdf生成pdf
-author: ForenewHan
-summary: >-
-  利用atom的package方便地把markdown生成排版好看的pdf，html，jpg等。
-tags:
-  - TIPS
-  - atom
-# external_link: 'https://forenewhan.science/programming/atom_markdown_to_pdf/'
-math: true
-header:
-  caption: 'pdf'
-  image: programming/atom.png
-slug: atom_markdown_to_pdf
-image_preview: programming/atom.png
----
++++
+title = "Hello world"
+date = 2018-02-27
+draft = false
+
+# Tags and categories
+# For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
+tags = ["TIPS","post"]
+categories = []
+summary = "利用atom的package方便地把markdown生成排版好看的pdf，html，jpg等。"
+
+# Featured image
+# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
+# Use `caption` to display an image caption.
+#   Markdown linking is allowed, e.g. `caption = "[Image credit](http://example.org)"`.
+# Set `preview` to `false` to disable the thumbnail in listings.
+[header]
+image = "programming/atom.png"
+caption = "pdf"
+preview = true
+
++++
+
 
 此前一直在用OneNote做笔记，虽然做的也是比较整洁。但OneNote一些格式调整还是不大方便。而且输出的选择也只有pdf，不方便在其它格式之间转换。另一方面，学计算机久了，也渐渐体会到开源的好处。更愿意使用像是LaTex或者是Markdown这样方便又快捷的记录方法。上个学期开始，解除了R语言之后，用了很久Rmarkdown，发现使用markdown语法可以便捷地生成像是jpg，pdf，html等格式。特定的输出也可以使用`.css`文件来调整。
 

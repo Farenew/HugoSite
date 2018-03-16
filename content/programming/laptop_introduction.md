@@ -3,9 +3,9 @@ date: '2018-03-14'
 title: 笔记本常识科普
 author: ForenewHan
 summary: >-
-  利用atom的package方便地把markdown生成排版好看的pdf，html，jpg等。
+  关于笔记本电脑一些部件的简要介绍。
 tags:
-  - TIPS
+  - knowledge
 # external_link: 'https://forenewhan.science/programming/laptop_introduction/'
 math: true
 header:

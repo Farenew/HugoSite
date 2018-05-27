@@ -15,7 +15,7 @@ summary = "关于色彩理论的一些内容, 这是第一部分, 关于物理�
 #   Markdown linking is allowed, e.g. `caption = "[Image credit](http://example.org)"`.
 # Set `preview` to `false` to disable the thumbnail in listings.
 [header]
-# image = "science/ColorTheory/bg.jpg"
+image = "science/ColorTheory/bg.jpg"
 caption = "Color Theory"
 preview = true
 

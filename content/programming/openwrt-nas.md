@@ -6,12 +6,12 @@ summary: >-
   用openwrt配置为NAS来实现简易版家庭影院。
 tags:
   - knowledge
-# external_link: 'https://forenewhan.science/programming/laptop_introduction/'
+# external_link: 'https://forenewhan.science/programming/openwrt_NAS/'
 math: true
 header:
   caption: '科普'
   image: programming/share.jpg
-slug: laptop_introduction
+slug: openwrt_NAS
 image_preview: programming/share.jpg
 ---
 

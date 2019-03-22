@@ -273,6 +273,17 @@ kmod-fs-xfs	| Kernel module for XFS support
 
 而像是`NTFS`这种windows下的文件系统, 支持就不那么好了。关于各种文件系统的支持及简介, 参考[官方文档](https://openwrt.org/docs/guide-user/storage/filesystems-and-partitions)
 
+实验了下,NTFS也可以挂载,速度确实慢一些. 要安装`ntfs-3g`:
+
+```
+opkg install ntfs-3g
+```
+
+挂载命令:
+```
+sudo mount -t ntfs-3g -o uid=$(id -u) /dev/sdb1 /mnt/
+```
+
 ## 5. 参考
 
 主要参考内容都在文中连接给出了, 此外配置中参考了[这篇文章](https://spotlightcybersecurity.com/openwrt-usb-storage.html)
